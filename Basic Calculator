@@ -1,5 +1,5 @@
 while True:
-    print("\nSimple Calculator")
+    print("\nBasic Calculator")
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
