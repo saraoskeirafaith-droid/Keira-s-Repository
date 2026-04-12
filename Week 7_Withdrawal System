@@ -1,0 +1,43 @@
+balance = 1000
+pin = "0936"
+
+user_pin = input("Enter your PIN: ")
+
+if user_pin != pin:
+    print("Incorrect PIN. Access denied.")
+else:
+    print("Access granted!\n")
+
+    while True:
+        print("\n--- MENU ---")
+        print("1 - Withdraw")
+        print("2 - Check Balance")
+        print("3 - Exit")
+
+        choice = input("Choose option: ")
+
+        if choice == "1":
+            try:
+                amount = int(input("Enter amount to withdraw: "))
+
+                if amount <= 0:
+                    print("Invalid amount")
+                elif amount > balance:
+                    print("Insufficient funds")
+                else:
+                    balance -= amount
+                    print("Withdrawal successful!")
+                    print("Remaining balance:", balance)
+
+            except:
+                print("Invalid input (numbers only)")
+
+        elif choice == "2":
+            print("Current balance:", balance)
+
+        elif choice == "3":
+            print("Thank you for using the system!")
+            break
+
+        else:
+            print("Invalid choice")
