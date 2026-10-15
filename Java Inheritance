@@ -1,0 +1,63 @@
+//MAIN.java
+
+package Inheritance;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Adobo adobo = new Adobo();
+        Sinigang sinigang = new Sinigang();
+
+        adobo.name = "Chicken Adobo";
+        adobo.origin = "Philippines";
+        adobo.meatType = "Chicken";
+
+        System.out.println("Food: " + adobo.name);
+        System.out.println("Origin: " + adobo.origin);
+        System.out.println("Meat Type: " + adobo.meatType);
+
+        System.out.println();
+
+        sinigang.name = "Sinigang na Baboy";
+        sinigang.origin = "Philippines";
+        sinigang.mainIngredient = "Pork";
+
+        System.out.println("Food: " + sinigang.name);
+        System.out.println("Origin: " + sinigang.origin);
+        System.out.println("Main Ingredient: " + sinigang.mainIngredient);
+    }
+}
+
+//SINIGANG.java
+
+package Inheritance;
+
+public class Sinigang extends FilipinoFood {
+
+    //Child Attribute
+    String mainIngredient;
+}
+
+//ADOBO.java
+
+package Inheritance;
+
+public class Adobo extends FilipinoFood {
+
+    //Child Attribute
+    String meatType;
+
+}
+
+//FilipinoFood.java
+
+package Inheritance;
+
+public class FilipinoFood {
+
+    // Parent Attributes
+    String name;
+    String origin;
+
+}
+
